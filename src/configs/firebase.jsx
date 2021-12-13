@@ -17,7 +17,9 @@ import {
   getDoc,
   addDoc,
   collection,
-  setDoc
+  setDoc,
+  getDocs,
+  deleteDoc
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -49,5 +51,7 @@ export {
   getDoc,
   addDoc,
   collection,
-  setDoc
+  setDoc,
+  getDocs,
+  deleteDoc
 };
