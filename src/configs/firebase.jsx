@@ -11,6 +11,15 @@ import {
   deleteUser,
 } from "firebase/auth";
 
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  addDoc,
+  collection,
+  setDoc
+} from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyA1aw2IeAtzySctjxKvtINf3z2FcEjk5eU",
   authDomain: "learning-deab3.firebaseapp.com",
@@ -24,6 +33,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
+const db = getFirestore();
 
 export {
   auth,
@@ -34,4 +44,10 @@ export {
   sendEmailVerification,
   sendPasswordResetEmail,
   deleteUser,
+  db,
+  doc,
+  getDoc,
+  addDoc,
+  collection,
+  setDoc
 };

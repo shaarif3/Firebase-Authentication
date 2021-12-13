@@ -5,6 +5,8 @@ import { auth, onAuthStateChanged } from "../configs/firebase";
 import Login from "../components/authentication/login";
 import Register from "../components/authentication/register";
 import Home from "../components/authentication/home";
+import DataSaving from "../components/data_saving";
+import Task from "../components/task";
 
 const AppRoutes = () => {
   useEffect(() => {
@@ -21,9 +23,11 @@ const AppRoutes = () => {
     <>
       <Router>
         <Switch>
-          <Route exact path="/login" component={Login} />
+          <Route  path="/login" component={Login} />
           <Route exact path="/" component={Register} />
-          <Route exact path="/home" component={Home} />
+          <Route  path="/home" component={Home} />
+          <Route  path="/data" component={DataSaving} />
+          <Route  path="/task" component={Task} />
         </Switch>
       </Router>
     </>
